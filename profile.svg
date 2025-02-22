@@ -1,97 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800" width="100%">
+  <!-- Definitions -->
   <defs>
-    <!-- Stardust Pattern from Repo -->
+    <!-- Stardust Pattern -->
     <pattern id="stardustPattern" patternUnits="userSpaceOnUse" width="300" height="300">
-      <image xlink:href="stardust.png" width="300" height="300" preserveAspectRatio="xMidYMid slice"/>
+      <image xlink:href="https://raw.githubusercontent.com/FreeMarketamilitia/FreeMarketamilitia/main/stardust.png" 
+             width="300" height="300" preserveAspectRatio="xMidYMid slice"/>
     </pattern>
 
-    <!-- Animated Gradient -->
-    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Gradient for Headers -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(135)">
       <stop offset="0%" stop-color="#8a2be2">
-        <animate attributeName="offset" values="-0.2;1.2;-0.2" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="offset" values="0;1;0" dur="6s" repeatCount="indefinite"/>
       </stop>
       <stop offset="100%" stop-color="#2c2c2c">
-        <animate attributeName="offset" values="1.2;-0.2;1.2" dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="offset" values="1;0;1" dur="6s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
 
-    <!-- Animated Glow Filter -->
+    <!-- Glow Filter -->
     <filter id="glowFilter">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur">
-        <animate attributeName="stdDeviation" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur">
+        <animate attributeName="stdDeviation" values="5;7;5" dur="2s" repeatCount="indefinite"/>
       </feGaussianBlur>
+      <feOffset dx="0" dy="0" result="offsetBlur"/>
+      <feFlood flood-color="#8a2be2" flood-opacity="0.5"/>
+      <feComposite in2="offsetBlur" operator="in"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Text Animation -->
+    <!-- CSS Animations -->
     <style type="text/css">
       <![CDATA[
         @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
         }
         .animate-text {
-          animation: fadeIn 1s ease-in forwards;
+          animation: fadeIn 0.8s ease-out forwards;
           opacity: 0;
+        }
+        .card-rect {
+          stroke: #444;
+          stroke-width: 1;
         }
       ]]>
     </style>
   </defs>
 
-  <!-- Background with Stardust -->
+  <!-- Background -->
   <rect width="100%" height="100%" fill="#1a1a1a"/>
   <rect width="100%" height="100%" fill="url(#stardustPattern)" opacity="0.15"/>
 
-  <!-- Content Group -->
-  <g transform="translate(40,40)">
-    <!-- Header Section -->
-    <g transform="translate(0,0)">
-      <rect width="920" height="100" rx="15" fill="url(#headerGradient)" filter="url(#glowFilter)"/>
-      <text class="animate-text" style="animation-delay:0.5s" x="30" y="40" font-family="Orbitron" font-size="32" fill="#e0e0e0">Jason Sandoz</text>
-      <text class="animate-text" style="animation-delay:1s" x="30" y="70" font-family="Orbitron" font-size="18" fill="#e0e0e0">Looking for Work | jaysandoz92@gmail.com</text>
+  <!-- Outer Container (Mimics Bootstrap .container) -->
+  <g transform="translate(20, 20)">
+    <!-- Header Card -->
+    <g class="animate-text" style="animation-delay:0.5s">
+      <rect x="0" y="0" width="960" height="120" rx="15" fill="url(#headerGradient)" filter="url(#glowFilter)" class="card-rect"/>
+      <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Card Header Border -->
+      <text x="30" y="30" font-family="Orbitron" font-size="24" fill="#e0e0e0" font-weight="700">Jason Sandoz</text>
+      <text x="30" y="80" font-family="Orbitron" font-size="16" fill="#e0e0e0">Looking for Work | jaysandoz92@gmail.com</text>
     </g>
 
     <!-- Profile Card -->
-    <g transform="translate(0,120)" class="animate-text" style="animation-delay:1.5s">
-      <rect width="920" height="140" rx="15" fill="#2c2c2c"/>
-      <text x="30" y="40" font-family="Orbitron" font-size="20" fill="#e0e0e0">Experienced Software Developer &amp; Problem Solver</text>
-      <text x="30" y="70" dy="1.2em" font-family="Orbitron" font-size="16" fill="#e0e0e0">Passionate about efficient, scalable solutions.</text>
-      <text x="30" y="70" dy="2.4em" font-family="Orbitron" font-size="16" fill="#e0e0e0">Expert in web tech, OOP, full-stack dev.</text>
-      <text x="30" y="70" dy="3.6em" font-family="Orbitron" font-size="16" fill="#e0e0e0">Thrives in dynamic, innovative environments.</text>
+    <g transform="translate(0, 140)" class="animate-text" style="animation-delay:1s">
+      <rect x="0" y="0" width="960" height="160" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect"/>
+      <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
+      <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#00b7eb" font-weight="700">About Me</text>
+      <text x="30" y="60" font-family="Orbitron" font-size="16" fill="#e0e0e0">Experienced Software Developer & Problem Solver</text>
+      <text x="30" y="90" font-family="Orbitron" font-size="14" fill="#e0e0e0">Passionate about efficient, scalable solutions.</text>
+      <text x="30" y="115" font-family="Orbitron" font-size="14" fill="#e0e0e0">Expert in web tech, OOP, full-stack dev.</text>
+      <text x="30" y="140" font-family="Orbitron" font-size="14" fill="#e0e0e0">Thrives in dynamic, innovative environments.</text>
     </g>
 
     <!-- Skills Card -->
-    <g transform="translate(0,280)" class="animate-text" style="animation-delay:2s">
-      <rect width="920" height="120" rx="15" fill="#2c2c2c"/>
-      <text x="30" y="40" font-family="Orbitron" font-size="24" fill="#8a2be2">Core Skills &amp; Technologies</text>
-      <text x="30" y="70" dy="1.2em" font-family="Orbitron" font-size="16" fill="#e0e0e0">Web: PHP, JS (Node, React), HTML/CSS</text>
-      <text x="30" y="70" dy="2.4em" font-family="Orbitron" font-size="16" fill="#e0e0e0">Backend: Python, C++, SQL, Apps Script</text>
-      <text x="30" y="70" dy="3.6em" font-family="Orbitron" font-size="16" fill="#e0e0e0">Tools: Git, Docker, REST, WordPress</text>
+    <g transform="translate(0, 320)" class="animate-text" style="animation-delay:1.5s">
+      <rect x="0" y="0" width="960" height="140" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect"/>
+      <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
+      <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#00b7eb" font-weight="700">Core Skills</text>
+      <text x="30" y="60" font-family="Orbitron" font-size="14" fill="#e0e0e0">🌐 Web: PHP, JS (Node, React), HTML/CSS</text>
+      <text x="30" y="85" font-family="Orbitron" font-size="14" fill="#e0e0e0">💻 Backend: Python, C++, SQL, Apps Script</text>
+      <text x="30" y="110" font-family="Orbitron" font-size="14" fill="#e0e0e0">🔧 Tools: Git, Docker, REST, WordPress</text>
     </g>
 
     <!-- Projects Card -->
-    <g transform="translate(0,420)" class="animate-text" style="animation-delay:2.5s">
-      <rect width="920" height="160" rx="15" fill="#2c2c2c"/>
-      <text x="30" y="40" font-family="Orbitron" font-size="24" fill="#8a2be2">Key Projects</text>
-      <text x="30" y="70" dy="1.2em" font-family="Orbitron" font-size="16" fill="#e0e0e0">Google API Doc Generator: Python automation tool</text>
-      <text x="30" y="70" dy="2.4em" font-family="Orbitron" font-size="16" fill="#e0e0e0">WooCommerce Google Wallet Tickets: WP plugin</text>
-      <text x="30" y="70" dy="3.6em" font-family="Orbitron" font-size="16" fill="#e0e0e0">CommandGen: AI terminal assistant</text>
+    <g transform="translate(0, 480)" class="animate-text" style="animation-delay:2s">
+      <rect x="0" y="0" width="960" height="160" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect"/>
+      <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
+      <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#00b7eb" font-weight="700">Key Projects</text>
+      <text x="30" y="60" font-family="Orbitron" font-size="14" fill="#e0e0e0">Google API Doc Generator: Python automation tool</text>
+      <text x="30" y="85" font-family="Orbitron" font-size="14" fill="#e0e0e0">WooCommerce Google Wallet Tickets: WP plugin</text>
+      <text x="30" y="110" font-family="Orbitron" font-size="14" fill="#e0e0e0">CommandGen: AI terminal assistant</text>
     </g>
 
-    <!-- Contact Section -->
-    <g transform="translate(0,600)" class="animate-text" style="animation-delay:3s">
-      <rect width="920" height="90" rx="15" fill="url(#headerGradient)"/>
-      <text x="30" y="40" font-family="Orbitron" font-size="24" fill="#e0e0e0">Contact Me</text>
+    <!-- Contact Card -->
+    <g transform="translate(0, 660)" class="animate-text" style="animation-delay:2.5s">
+      <rect x="0" y="0" width="960" height="100" rx="15" fill="url(#headerGradient)" filter="url(#glowFilter)" class="card-rect"/>
+      <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
+      <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#e0e0e0" font-weight="700">Contact Me</text>
       <text x="30" y="70" font-family="Orbitron" font-size="16" fill="#e0e0e0">jaysandoz92@gmail.com</text>
     </g>
   </g>
 
-  <!-- Animated Border -->
-  <rect x="20" y="20" width="960" height="760" rx="20" fill="none" stroke="#8a2be2" stroke-width="2" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/>
+  <!-- Outer Border with Animation -->
+  <rect x="15" y="15" width="970" height="770" rx="20" fill="none" stroke="#8a2be2" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
   </rect>
 </svg>

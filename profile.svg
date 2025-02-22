@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- v1.2 - 2025-02-21 -->
+<!-- v1.3 - 2025-02-21 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 900" width="800" preserveAspectRatio="xMidYMid meet" xml:lang="en">
   <defs>
+    <!-- Stardust Pattern -->
     <pattern id="stardustPattern" patternUnits="userSpaceOnUse" width="300" height="300">
       <rect width="300" height="300" fill="#1a1a1a"/>
       <image xlink:href="https://raw.githubusercontent.com/FreeMarketamilitia/FreeMarketamilitia/main/stardust.png" width="300" height="300" preserveAspectRatio="xMidYMid slice"/>
     </pattern>
+    <!-- Gradient -->
     <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(135)">
       <stop offset="0%" stop-color="#8a2be2"><animate attributeName="offset" values="0;1;0" dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1"/></stop>
       <stop offset="100%" stop-color="#2c2c2c"><animate attributeName="offset" values="1;0;1" dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1"/></stop>
     </linearGradient>
+    <!-- Glow Filter -->
     <filter id="glowFilter">
       <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"><animate attributeName="stdDeviation" values="3;5;3" dur="2s" repeatCount="indefinite" keyTimes="0;0.5;1"/></feGaussianBlur>
       <feOffset dx="0" dy="0" result="offsetBlur"/>
@@ -17,6 +20,7 @@
       <feComposite in2="offsetBlur" operator="in"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <!-- Text Shadow -->
     <filter id="textShadow">
       <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
       <feOffset dx="1" dy="1"/>
@@ -24,8 +28,8 @@
       <feComposite in2="SourceAlpha" operator="in"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <symbol id="plainCard"><rect x="0" y="0" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect" focusable="false"/></symbol>
-    <style>.animate-text{animation:fadeIn .8s ease-out forwards;opacity:0;}.card-rect{stroke:#444;stroke-width:1;}.title{filter:url(#textShadow);}@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}</style>
+    <!-- Styles -->
+    <style>.animate-text{animation:fadeIn .8s ease-out forwards;opacity:0;}.card-rect{stroke:#444;stroke-width:1;stroke-opacity:0.8;}.title{filter:url(#textShadow);}@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}</style>
   </defs>
 
   <!-- Background -->
@@ -42,12 +46,13 @@
       <title>Profile Header</title>
       <desc>Jason Sandoz's contact information</desc>
       <text x="35" y="30" font-family="Orbitron" font-size="24" fill="#f0f0f0" font-weight="700" class="title">Jason Sandoz</text>
+      <rect x="35" y="40" width="130" height="2" fill="#00d4ff" focusable="false"/>
       <text x="35" y="85" font-family="Orbitron" font-size="16" fill="#f0f0f0">Looking for Work | jaysandoz92@gmail.com</text>
     </g>
 
     <!-- Profile Card -->
     <g id="profile-card" transform="translate(0, 170)" class="animate-text" style="animation-delay:1s" aria-label="Profile summary card">
-      <use xlink:href="#plainCard" width="900" height="170"/>
+      <rect x="0" y="0" width="900" height="170" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect" focusable="false"/>
       <rect x="0" y="40" width="900" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
       <title>About Me</title>
       <desc>Professional summary of Jason Sandoz's experience and skills</desc>
@@ -60,7 +65,7 @@
 
     <!-- Skills Card -->
     <g id="skills-card" transform="translate(0, 360)" class="animate-text" style="animation-delay:1.5s" aria-label="Skills card">
-      <use xlink:href="#plainCard" width="900" height="170"/>
+      <rect x="0" y="0" width="900" height="170" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect" focusable="false"/>
       <rect x="0" y="40" width="900" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
       <title>Core Skills</title>
       <desc>List of Jason's core technical skills</desc>
@@ -73,7 +78,7 @@
 
     <!-- Projects Card -->
     <g id="projects-card" transform="translate(0, 550)" class="animate-text" style="animation-delay:2s" aria-label="Projects card">
-      <use xlink:href="#plainCard" width="900" height="170"/>
+      <rect x="0" y="0" width="900" height="170" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect" focusable="false"/>
       <rect x="0" y="40" width="900" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
       <title>Key Projects</title>
       <desc>Highlights of Jason's notable projects</desc>
@@ -91,6 +96,7 @@
       <title>Contact Me</title>
       <desc>Contact email for Jason Sandoz</desc>
       <text x="35" y="30" font-family="Orbitron" font-size="20" fill="#f0f0f0" font-weight="700" class="title">Contact Me</text>
+      <rect x="35" y="40" width="110" height="2" fill="#00d4ff" focusable="false"/>
       <text x="35" y="85" font-family="Orbitron" font-size="16" fill="#f0f0f0">jaysandoz92@gmail.com</text>
     </g>
   </g>

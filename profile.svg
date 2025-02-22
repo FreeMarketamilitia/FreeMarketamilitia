@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800" width="100%">
   <defs>
+    <!-- Stardust Pattern from Repo -->
+    <pattern id="stardustPattern" patternUnits="userSpaceOnUse" width="300" height="300">
+      <image xlink:href="stardust.png" width="300" height="300" preserveAspectRatio="xMidYMid slice"/>
+    </pattern>
+
     <!-- Animated Gradient -->
     <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8a2be2">
@@ -37,8 +42,9 @@
     </style>
   </defs>
 
-  <!-- Background -->
+  <!-- Background with Stardust -->
   <rect width="100%" height="100%" fill="#1a1a1a"/>
+  <rect width="100%" height="100%" fill="url(#stardustPattern)" opacity="0.15"/>
 
   <!-- Content Group -->
   <g transform="translate(40,40)">

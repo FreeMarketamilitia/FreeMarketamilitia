@@ -1,72 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
   <rect width="100%" height="100%" fill="#1a1a1a"/>
   
   <!-- Banner Section -->
   <rect x="20" y="20" width="960" height="100" fill="#8a2be2" rx="15" onmouseover="this.setAttribute('fill', '#00b7eb')" onmouseout="this.setAttribute('fill', '#8a2be2')"/>
   <text x="50" y="60" font-family="Orbitron" font-size="32" fill="#e0e0e0">Jason Sandoz</text>
-  <text x="50" y="100" font-family="Orbitron" font-size="18" fill="#e0e0e0">Looking for Work | jaysandoz92@gmail.com</text>
+  <text x="50" y="90" font-family="Orbitron" font-size="18" fill="#e0e0e0">Looking for Work | jaysandoz92@gmail.com</text>
   
   <!-- Profile Description -->
-  <rect x="20" y="140" width="960" height="120" fill="#2c2c2c" rx="15"/>
-  <text x="50" y="170" font-family="Orbitron" font-size="20" fill="#e0e0e0">
-    Experienced Software Developer &amp; Problem Solver
-  </text>
-  <text x="50" y="200" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    Passionate about building efficient, scalable, and high-quality software solutions. With a strong foundation in object-oriented programming and extensive experience with web technologies, I specialize in both front-end and back-end development. I thrive in dynamic environments, where I can leverage my skills to create innovative solutions and drive business success.
-  </text>
+  <rect x="20" y="130" width="960" height="140" fill="#2c2c2c" rx="15"/>
+  <text x="50" y="160" font-family="Orbitron" font-size="20" fill="#e0e0e0">Experienced Software Developer &amp; Problem Solver</text>
+  <text x="50" y="190" font-family="Orbitron" font-size="16" fill="#e0e0e0">Passionate about building efficient, scalable solutions.</text>
+  <text x="50" y="215" font-family="Orbitron" font-size="16" fill="#e0e0e0">Expertise in web tech, OOP, and full-stack development.</text>
+  <text x="50" y="240" font-family="Orbitron" font-size="16" fill="#e0e0e0">Thrives in dynamic environments driving innovation.</text>
   
   <!-- Skills Section -->
-  <rect x="20" y="280" width="960" height="100" fill="#2c2c2c" rx="15"/>
-  <text x="50" y="310" font-family="Orbitron" font-size="24" fill="#8a2be2">
-    Core Skills &amp; Technologies:
-  </text>
-  <text x="50" y="340" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    🌐 Web Development: PHP, JavaScript (Node.js, React), HTML/CSS
-  </text>
-  <text x="50" y="370" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    💻 Backend: Python, C++, SQL (MySQL, PostgreSQL), Google Apps Script
-  </text>
-  <text x="50" y="400" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    🔧 Tools: Git, Docker, Nginx, RESTful APIs, WordPress Development
-  </text>
-  <text x="50" y="430" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    ⚙️ OOP Concepts, MVC Architecture, Agile Methodologies, Data Structures
-  </text>
+  <rect x="20" y="280" width="960" height="120" fill="#2c2c2c" rx="15"/>
+  <text x="50" y="310" font-family="Orbitron" font-size="24" fill="#8a2be2">Core Skills &amp; Technologies:</text>
+  <text x="50" y="340" font-family="Orbitron" font-size="16" fill="#e0e0e0">🌐 Web: PHP, JS (Node, React), HTML/CSS</text>
+  <text x="50" y="365" font-family="Orbitron" font-size="16" fill="#e0e0e0">💻 Backend: Python, C++, SQL, Google Apps Script</text>
+  <text x="50" y="390" font-family="Orbitron" font-size="16" fill="#e0e0e0">🔧 Tools: Git, Docker, REST APIs, WordPress</text>
   
   <!-- Experience Section -->
-  <rect x="20" y="460" width="960" height="120" fill="#2c2c2c" rx="15"/>
-  <text x="50" y="490" font-family="Orbitron" font-size="24" fill="#8a2be2">
-    Professional Experience:
-  </text>
-  <text x="50" y="520" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    - Full-stack Developer at XYZ Corp. (2019-Present): Built scalable web applications, implemented API integrations, and improved backend performance using PHP, Python, and SQL.
-  </text>
-  <text x="50" y="550" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    - Software Engineer at ABC Solutions (2017-2019): Developed C++ algorithms, contributed to system optimizations, and maintained databases for high-traffic applications.
-  </text>
-  <text x="50" y="580" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    - Freelance Developer (2015-2017): Delivered custom WordPress sites, eCommerce platforms, and Google Apps Script solutions for small businesses.
-  </text>
+  <rect x="20" y="410" width="960" height="160" fill="#2c2c2c" rx="15"/>
+  <text x="50" y="440" font-family="Orbitron" font-size="24" fill="#8a2be2">Professional Experience:</text>
+  <text x="50" y="470" font-family="Orbitron" font-size="16" fill="#e0e0e0">Full-stack Dev, XYZ Corp (2019-Present):</text>
+  <text x="70" y="495" font-family="Orbitron" font-size="16" fill="#e0e0e0">Built scalable web apps &amp; APIs with PHP/Python</text>
+  <text x="50" y="520" font-family="Orbitron" font-size="16" fill="#e0e0e0">Software Eng, ABC Solutions (2017-2019):</text>
+  <text x="70" y="545" font-family="Orbitron" font-size="16" fill="#e0e0e0">C++ algorithms &amp; database optimization</text>
   
   <!-- Projects Section -->
-  <rect x="20" y="600" width="960" height="80" fill="#2c2c2c" rx="15"/>
-  <text x="50" y="630" font-family="Orbitron" font-size="24" fill="#8a2be2">
-    Key Projects:
-  </text>
-  <text x="50" y="660" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    - Google Apps Script Grading System: Automated grading and feedback generation using Google Classroom API and Gemini AI.
-  </text>
-  <text x="50" y="690" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    - WordPress Site Optimization: Enhanced speed, security, and SEO for multiple client websites, increasing traffic by 30%.
-  </text>
+  <rect x="20" y="580" width="960" height="100" fill="#2c2c2c" rx="15"/>
+  <text x="50" y="610" font-family="Orbitron" font-size="24" fill="#8a2be2">Key Projects:</text>
+  <text x="50" y="640" font-family="Orbitron" font-size="16" fill="#e0e0e0">Google Apps Script Grading: Automated grading system</text>
+  <text x="50" y="665" font-family="Orbitron" font-size="16" fill="#e0e0e0">WordPress Optimization: Improved speed &amp; SEO</text>
   
   <!-- Contact Section -->
-  <rect x="20" y="700" width="960" height="80" fill="#8a2be2" rx="15" onmouseover="this.setAttribute('fill', '#00b7eb')" onmouseout="this.setAttribute('fill', '#8a2be2')"/>
-  <text x="50" y="730" font-family="Orbitron" font-size="24" fill="#e0e0e0">
-    Contact Me
-  </text>
-  <text x="50" y="760" font-family="Orbitron" font-size="16" fill="#e0e0e0">
-    Let's connect and discuss how I can help your company succeed: jaysandoz92@gmail.com
-  </text>
+  <rect x="20" y="690" width="960" height="90" fill="#8a2be2" rx="15" onmouseover="this.setAttribute('fill', '#00b7eb')" onmouseout="this.setAttribute('fill', '#8a2be2')"/>
+  <text x="50" y="720" font-family="Orbitron" font-size="24" fill="#e0e0e0">Contact Me</text>
+  <text x="50" y="750" font-family="Orbitron" font-size="16" fill="#e0e0e0">jaysandoz92@gmail.com</text>
 </svg>
-

@@ -1,117 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- v1.8 - 2025-02-21 - Professional polish with advanced SVG techniques -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 950" width="800" preserveAspectRatio="xMidYMid meet" xml:lang="en">
-  <!-- Definitions -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
   <defs>
-    <!-- Stardust Pattern -->
-    <pattern id="stardustPattern" patternUnits="userSpaceOnUse" width="300" height="300">
-      <rect width="300" height="300" fill="#1a1a1a"/>
-      <image xlink:href="https://example.com/stardust.png" width="300" height="300" preserveAspectRatio="xMidYMid slice"/>
-    </pattern>
-    <!-- Header Gradient -->
-    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(135)">
-      <stop offset="0%" stop-color="#8a2be2"/>
-      <stop offset="100%" stop-color="#2c2c2c"/>
-      <animate attributeName="gradientTransform" values="rotate(135);rotate(145);rotate(135)" dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
+    <!-- Background gradient from dark gray to slightly lighter gray -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#222"/>
     </linearGradient>
-    <!-- Subtle Shadow Filter -->
-    <filter id="shadowFilter">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+    <!-- Shadow filter for the card -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset dx="2" dy="2" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Text shadow filter for better visibility -->
+    <filter id="textShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
       <feOffset dx="1" dy="1" result="offsetBlur"/>
-      <feFlood flood-color="#8a2be2" flood-opacity="0.3"/>
+      <feFlood flood-color="#000"/>
       <feComposite in2="offsetBlur" operator="in"/>
       <feMerge>
         <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <!-- Styles -->
-    <style>
-      <![CDATA[
-        .animate-card { animation: scaleIn 0.6s ease-out forwards; opacity: 0; }
-        .card-rect { stroke: #8a2be2; stroke-width: 1; stroke-opacity: 0.6; }
-        .card-rect-hover { animation: pulseStroke 2s infinite; }
-        .title { filter: url(#shadowFilter); font-weight: 700; }
-        @keyframes scaleIn {
-          from { opacity: 0; transform: scale(0.95) translateY(10px); }
-          to { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        @keyframes pulseStroke {
-          0% { stroke-opacity: 0.6; }
-          50% { stroke-opacity: 1; }
-          100% { stroke-opacity: 0.6; }
-        }
-      ]]>
-    </style>
   </defs>
-
-  <!-- Background -->
-  <rect x="0" y="0" width="900" height="950" fill="#1a1a1a" focusable="false"/>
-  <rect x="0" y="0" width="900" height="950" fill="url(#stardustPattern)" opacity="0.2" focusable="false"/>
-
-  <!-- Header Card -->
-  <g transform="translate(20, 20)" class="animate-card" style="animation-delay:0.2s" aria-label="Profile header card">
-    <rect x="0" y="0" width="860" height="120" rx="10" fill="url(#headerGradient)" class="card-rect card-rect-hover" focusable="false"/>
-    <rect x="20" y="40" width="820" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
-    <title>Profile Header</title>
-    <desc>Jason Sandoz's contact information</desc>
-    <text x="30" y="30" font-family="Orbitron, Arial, sans-serif" font-size="22" fill="#e0e0e0" class="title">Jason Sandoz</text>
-    <rect x="30" y="42" width="120" height="2" fill="#00b7eb" focusable="false"/>
-    <text x="30" y="85" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">Looking for Work | jaysandoz92@gmail.com</text>
+  <!-- Card background with gradient and shadow -->
+  <rect x="10" y="10" width="280" height="180" rx="15" fill="url(#bgGradient)" stroke="#333" stroke-width="2" filter="url(#shadow)"/>
+  <!-- Title text in cyan with shadow -->
+  <text x="150" y="60" font-family="Orbitron, sans-serif" font-size="24" fill="#00b7eb" text-anchor="middle" filter="url(#textShadow)">Jason Sandoz</text>
+  <!-- Description text in light gray with shadow -->
+  <text x="150" y="90" font-family="Orbitron, sans-serif" font-size="16" fill="#e0e0e0" text-anchor="middle" filter="url(#textShadow)">Software Developer</text>
+  <!-- Laptop icon below the text -->
+  <g transform="translate(120, 120)">
+    <!-- Screen in cyan -->
+    <rect x="0" y="0" width="60" height="40" fill="#00b7eb"/>
+    <!-- Base in dark gray -->
+    <rect x="0" y="40" width="60" height="10" fill="#333"/>
   </g>
-
-  <!-- Profile Card -->
-  <g transform="translate(20, 160)" class="animate-card" style="animation-delay:0.4s" aria-label="Profile summary card">
-    <rect x="0" y="0" width="860" height="150" rx="10" fill="#2c2c2c" class="card-rect card-rect-hover" focusable="false"/>
-    <rect x="20" y="40" width="820" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
-    <title>About Me</title>
-    <desc>Professional summary of Jason Sandoz's experience and skills</desc>
-    <text x="30" y="30" font-family="Orbitron, Arial, sans-serif" font-size="22" fill="#00b7eb" class="title">About Me</text>
-    <rect x="30" y="42" width="90" height="2" fill="#00b7eb" focusable="false"/>
-    <text x="30" y="70" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">Experienced Software Developer</text>
-    <text x="30" y="95" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">Scalable Solutions Enthusiast</text>
-    <text x="30" y="120" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">Full-Stack & OOP Expert</text>
-  </g>
-
-  <!-- Skills Card -->
-  <g transform="translate(20, 330)" class="animate-card" style="animation-delay:0.6s" aria-label="Skills card">
-    <rect x="0" y="0" width="860" height="150" rx="10" fill="#2c2c2c" class="card-rect card-rect-hover" focusable="false"/>
-    <rect x="20" y="40" width="820" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
-    <title>Core Skills</title>
-    <desc>List of Jason's core technical skills</desc>
-    <text x="30" y="30" font-family="Orbitron, Arial, sans-serif" font-size="22" fill="#00b7eb" class="title">Core Skills</text>
-    <rect x="30" y="42" width="90" height="2" fill="#00b7eb" focusable="false"/>
-    <text x="30" y="70" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0"><tspan dx="-5" font-size="12">🌐</tspan> Web: PHP, JS (Node, React), HTML/CSS</text>
-    <text x="30" y="95" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0"><tspan dx="-5" font-size="12">💻</tspan> Backend: Python, C++, SQL</text>
-    <text x="30" y="120" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0"><tspan dx="-5" font-size="12">🔧</tspan> Tools: Git, Docker, REST</text>
-  </g>
-
-  <!-- Projects Card -->
-  <g transform="translate(20, 500)" class="animate-card" style="animation-delay:0.8s" aria-label="Projects card">
-    <rect x="0" y="0" width="860" height="150" rx="10" fill="#2c2c2c" class="card-rect card-rect-hover" focusable="false"/>
-    <rect x="20" y="40" width="820" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
-    <title>Key Projects</title>
-    <desc>Highlights of Jason's notable projects</desc>
-    <text x="30" y="30" font-family="Orbitron, Arial, sans-serif" font-size="22" fill="#00b7eb" class="title">Key Projects</text>
-    <rect x="30" y="42" width="100" height="2" fill="#00b7eb" focusable="false"/>
-    <text x="30" y="70" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">Google API Doc Generator</text>
-    <text x="30" y="95" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">WooCommerce Wallet Tickets</text>
-    <text x="30" y="120" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">CommandGen AI Assistant</text>
-  </g>
-
-  <!-- Contact Card -->
-  <g transform="translate(20, 670)" class="animate-card" style="animation-delay:1s" aria-label="Contact card">
-    <rect x="0" y="0" width="860" height="120" rx="10" fill="url(#headerGradient)" class="card-rect card-rect-hover" focusable="false"/>
-    <rect x="20" y="40" width="820" height="1" fill="#555" stroke-dasharray="5,5" focusable="false"/>
-    <title>Contact Me</title>
-    <desc>Contact email for Jason Sandoz</desc>
-    <text x="30" y="30" font-family="Orbitron, Arial, sans-serif" font-size="22" fill="#e0e0e0" class="title">Contact Me</text>
-    <rect x="30" y="42" width="100" height="2" fill="#00b7eb" focusable="false"/>
-    <text x="30" y="85" font-family="Orbitron, Arial, sans-serif" font-size="14" fill="#e0e0e0">jaysandoz92@gmail.com</text>
-  </g>
-
-  <!-- Outer Border -->
-  <rect x="10" y="10" width="880" height="930" rx="10" fill="none" stroke="#8a2be2" stroke-width="1.5" opacity="0.5" focusable="false">
-    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
-  </rect>
 </svg>

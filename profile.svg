@@ -34,14 +34,14 @@
 
   <!-- Profile Description (Card) -->
   <rect x="30" y="140" width="940" height="140" fill="#2c2c2c" rx="15" stroke="#444" stroke-width="1" filter="url(#shadowGlow)"/>
-  <text x="60" y="170" font-family="Orbitron" font-size="20" fill="#e0e0e0">Experienced Software Developer & Problem Solver</text>
+  <text x="60" y="170" font-family="Orbitron" font-size="20" fill="#e0e0e0">Experienced Software Developer &amp; Problem Solver</text>
   <text x="60" y="200" font-family="Orbitron" font-size="16" fill="#e0e0e0">Passionate about efficient, scalable solutions.</text>
   <text x="60" y="225" font-family="Orbitron" font-size="16" fill="#e0e0e0">Expert in web tech, OOP, full-stack dev.</text>
   <text x="60" y="250" font-family="Orbitron" font-size="16" fill="#e0e0e0">Thrives in dynamic, innovative environments.</text>
 
   <!-- Skills Section (Card) -->
   <rect x="30" y="300" width="940" height="120" fill="#2c2c2c" rx="15" stroke="#444" stroke-width="1" filter="url(#shadowGlow)"/>
-  <text x="60" y="330" font-family="Orbitron" font-size="24" fill="#8a2be2">Core Skills & Technologies:</text>
+  <text x="60" y="330" font-family="Orbitron" font-size="24" fill="#8a2be2">Core Skills &amp; Technologies:</text>
   <text x="60" y="360" font-family="Orbitron" font-size="16" fill="#e0e0e0">🌐 Web: PHP, JS (Node, React), HTML/CSS</text>
   <text x="60" y="385" font-family="Orbitron" font-size="16" fill="#e0e0e0">💻 Backend: Python, C++, SQL, Apps Script</text>
   <text x="60" y="410" font-family="Orbitron" font-size="16" fill="#e0e0e0">🔧 Tools: Git, Docker, REST, WordPress</text>
@@ -50,15 +50,15 @@
   <rect x="30" y="430" width="940" height="160" fill="#2c2c2c" rx="15" stroke="#444" stroke-width="1" filter="url(#shadowGlow)"/>
   <text x="60" y="460" font-family="Orbitron" font-size="24" fill="#8a2be2">Professional Experience:</text>
   <text x="60" y="490" font-family="Orbitron" font-size="16" fill="#e0e0e0">Full-stack Dev, XYZ Corp (2019-Now):</text>
-  <text x="80" y="515" font-family="Orbitron" font-size="16" fill="#e0e0e0">Scalable web apps & APIs (PHP/Python)</text>
+  <text x="80" y="515" font-family="Orbitron" font-size="16" fill="#e0e0e0">Scalable web apps &amp; APIs (PHP/Python)</text>
   <text x="60" y="540" font-family="Orbitron" font-size="16" fill="#e0e0e0">Software Eng, ABC (2017-2019):</text>
-  <text x="80" y="565" font-family="Orbitron" font-size="16" fill="#e0e0e0">C++ algos & DB optimization</text>
+  <text x="80" y="565" font-family="Orbitron" font-size="16" fill="#e0e0e0">C++ algos &amp; DB optimization</text>
 
   <!-- Projects Section (Card) -->
   <rect x="30" y="600" width="940" height="100" fill="#2c2c2c" rx="15" stroke="#444" stroke-width="1" filter="url(#shadowGlow)"/>
   <text x="60" y="630" font-family="Orbitron" font-size="24" fill="#8a2be2">Key Projects:</text>
   <text x="60" y="660" font-family="Orbitron" font-size="16" fill="#e0e0e0">Apps Script Grading: Auto-grading system</text>
-  <text x="60" y="685" font-family="Orbitron" font-size="16" fill="#e0e0e0">WordPress Opt: Speed & SEO boost</text>
+  <text x="60" y="685" font-family="Orbitron" font-size="16" fill="#e0e0e0">WordPress Opt: Speed &amp; SEO boost</text>
 
   <!-- Contact Section (Gradient Header with Button Style) -->
   <rect x="30" y="710" width="940" height="90" fill="url(#gradientHeader)" rx="15" filter="url(#shadowGlow)"/>

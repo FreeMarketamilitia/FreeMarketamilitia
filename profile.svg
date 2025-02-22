@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 850" width="100%">
   <!-- Definitions -->
   <defs>
     <!-- Stardust Pattern -->
@@ -55,7 +55,7 @@
   <rect width="100%" height="100%" fill="#1a1a1a"/>
   <rect width="100%" height="100%" fill="url(#stardustPattern)" opacity="0.15"/>
 
-  <!-- Outer Container (Mimics Bootstrap .container) -->
+  <!-- Outer Container (Mimics Bootstrap .container with margins) -->
   <g transform="translate(20, 20)">
     <!-- Header Card -->
     <g class="animate-text" style="animation-delay:0.5s">
@@ -66,28 +66,28 @@
     </g>
 
     <!-- Profile Card -->
-    <g transform="translate(0, 140)" class="animate-text" style="animation-delay:1s">
+    <g transform="translate(0, 150)" class="animate-text" style="animation-delay:1s">
       <rect x="0" y="0" width="960" height="160" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect"/>
       <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
       <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#00b7eb" font-weight="700">About Me</text>
-      <text x="30" y="60" font-family="Orbitron" font-size="16" fill="#e0e0e0">Experienced Software Developer & Problem Solver</text>
-      <text x="30" y="90" font-family="Orbitron" font-size="14" fill="#e0e0e0">Passionate about efficient, scalable solutions.</text>
-      <text x="30" y="115" font-family="Orbitron" font-size="14" fill="#e0e0e0">Expert in web tech, OOP, full-stack dev.</text>
-      <text x="30" y="140" font-family="Orbitron" font-size="14" fill="#e0e0e0">Thrives in dynamic, innovative environments.</text>
+      <text x="30" y="60" font-family="Orbitron" font-size="14" fill="#e0e0e0">Experienced Software Developer and Problem Solver</text>
+      <text x="30" y="85" font-family="Orbitron" font-size="14" fill="#e0e0e0">Passionate about efficient, scalable solutions</text>
+      <text x="30" y="110" font-family="Orbitron" font-size="14" fill="#e0e0e0">Expert in web tech, OOP, full-stack dev</text>
+      <text x="30" y="135" font-family="Orbitron" font-size="14" fill="#e0e0e0">Thrives in dynamic, innovative environments</text>
     </g>
 
     <!-- Skills Card -->
-    <g transform="translate(0, 320)" class="animate-text" style="animation-delay:1.5s">
+    <g transform="translate(0, 330)" class="animate-text" style="animation-delay:1.5s">
       <rect x="0" y="0" width="960" height="140" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect"/>
       <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
       <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#00b7eb" font-weight="700">Core Skills</text>
-      <text x="30" y="60" font-family="Orbitron" font-size="14" fill="#e0e0e0">🌐 Web: PHP, JS (Node, React), HTML/CSS</text>
-      <text x="30" y="85" font-family="Orbitron" font-size="14" fill="#e0e0e0">💻 Backend: Python, C++, SQL, Apps Script</text>
-      <text x="30" y="110" font-family="Orbitron" font-size="14" fill="#e0e0e0">🔧 Tools: Git, Docker, REST, WordPress</text>
+      <text x="30" y="60" font-family="Orbitron" font-size="14" fill="#e0e0e0">Web: PHP, JS (Node, React), HTML/CSS</text>
+      <text x="30" y="85" font-family="Orbitron" font-size="14" fill="#e0e0e0">Backend: Python, C++, SQL, Apps Script</text>
+      <text x="30" y="110" font-family="Orbitron" font-size="14" fill="#e0e0e0">Tools: Git, Docker, REST, WordPress</text>
     </g>
 
     <!-- Projects Card -->
-    <g transform="translate(0, 480)" class="animate-text" style="animation-delay:2s">
+    <g transform="translate(0, 490)" class="animate-text" style="animation-delay:2s">
       <rect x="0" y="0" width="960" height="160" rx="15" fill="#2c2c2c" filter="url(#glowFilter)" class="card-rect"/>
       <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
       <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#00b7eb" font-weight="700">Key Projects</text>
@@ -97,7 +97,7 @@
     </g>
 
     <!-- Contact Card -->
-    <g transform="translate(0, 660)" class="animate-text" style="animation-delay:2.5s">
+    <g transform="translate(0, 670)" class="animate-text" style="animation-delay:2.5s">
       <rect x="0" y="0" width="960" height="100" rx="15" fill="url(#headerGradient)" filter="url(#glowFilter)" class="card-rect"/>
       <rect x="0" y="40" width="960" height="1" fill="#555"/> <!-- Header Border -->
       <text x="30" y="30" font-family="Orbitron" font-size="20" fill="#e0e0e0" font-weight="700">Contact Me</text>
@@ -106,7 +106,7 @@
   </g>
 
   <!-- Outer Border with Animation -->
-  <rect x="15" y="15" width="970" height="770" rx="20" fill="none" stroke="#8a2be2" stroke-width="2" opacity="0.5">
+  <rect x="15" y="15" width="970" height="820" rx="20" fill="none" stroke="#8a2be2" stroke-width="2" opacity="0.5">
     <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
   </rect>
 </svg>

@@ -1,4 +1,3 @@
-```markdown
 ## 👋 About Me
 Hi, I’m **Jason Sandoz** (aka *FreeMarketMilitia*), a Palm Springs–based software artisan with 3+ years’ experience. I build scalable, accessible web apps using modern JS/TS, AI-driven automations, and interactive SVG/Canvas graphics.
 
@@ -35,4 +34,4 @@ Hi, I’m **Jason Sandoz** (aka *FreeMarketMilitia*), a Palm Springs–based sof
 - ✉️  jaysandoz92@gmail.com  
 - 🌐  [GitHub](https://github.com/freemarketamilitia)  
 - 🖥️  [Portfolio](https://js-terminal-portfolio.netlify.app/)
-```
+
